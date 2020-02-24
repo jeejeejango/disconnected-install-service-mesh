@@ -54,5 +54,8 @@ openshift-marketplace/mirrored-operator-catalog:latest
 for image in ${images[@]}; do
 	src=$image
 	dst=${REGISTRY}/${image#*/}
+	
+	echo "mirroring image \"${src}\""
+
 	skopeo copy --format=v2s2 docker://$src docker://$dst
 done
