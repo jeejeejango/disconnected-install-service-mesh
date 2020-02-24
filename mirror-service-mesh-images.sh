@@ -43,7 +43,7 @@ registry.redhat.io/openshift4/ose-logging-elasticsearch5:latest
 registry.redhat.io/openshift4/openshift4/ose-oauth-proxy:latest
 registry.redhat.io/openshift4/ose-oauth-proxy:4.2
 docker.io/maistra/examples-bookinfo-details-v1:0.12.0
-docker.io/examples-bookinfo-productpage-v1:0.12.0
+docker.io/maistra/examples-bookinfo-productpage-v1:0.12.0
 docker.io/maistra/examples-bookinfo-ratings-v1:0.12.0
 docker.io/maistra/examples-bookinfo-reviews-v1:0.12.0
 docker.io/maistra/examples-bookinfo-reviews-v2:0.12.0
