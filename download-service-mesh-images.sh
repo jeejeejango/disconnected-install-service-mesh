@@ -52,7 +52,7 @@ docker.io/maistra/examples-bookinfo-reviews-v3:0.12.0
 
 for image in ${images[@]}; do
 	src=$image
-	dst=${DESTDIR}/${image#*/}.tar
+	dst=${DESTDIR}/${image##*/}.tar
 	podman pull $src
 	podman save $src > $dst
 done
