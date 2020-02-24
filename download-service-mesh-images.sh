@@ -40,7 +40,7 @@ registry.redhat.io/openshift-service-mesh/proxyv2-rhel8:1.0.7
 registry.redhat.io/openshift-service-mesh/sidecar-injector-rhel8:1.0.7
 registry.redhat.io/openshift4/ose-elasticsearch-operator:latest
 registry.redhat.io/openshift4/ose-logging-elasticsearch5:latest
-registry.redhat.io/openshift4/openshift4/ose-oauth-proxy:latest
+registry.redhat.io/openshift4/ose-oauth-proxy:latest
 registry.redhat.io/openshift4/ose-oauth-proxy:4.2
 docker.io/maistra/examples-bookinfo-details-v1:0.12.0
 docker.io/maistra/examples-bookinfo-productpage-v1:0.12.0
