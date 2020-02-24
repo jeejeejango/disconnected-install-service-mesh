@@ -13,10 +13,10 @@ function panic(){
 }
 
 if [ $# -lt 1 ]; then
-    panic  "Usage: $0 Registry URL"
+    panic  "Usage: $0 Destination directory"
 fi
 
-REGISTRY=$1
+DESTDIR=$1
 
 images=(
 registry.redhat.io/distributed-tracing/jaeger-agent-rhel7:1.13.1
@@ -48,11 +48,11 @@ docker.io/maistra/examples-bookinfo-ratings-v1:0.12.0
 docker.io/maistra/examples-bookinfo-reviews-v1:0.12.0
 docker.io/maistra/examples-bookinfo-reviews-v2:0.12.0
 docker.io/maistra/examples-bookinfo-reviews-v3:0.12.0
-openshift-marketplace/mirrored-operator-catalog:latest
 )
 
 for image in ${images[@]}; do
 	src=$image
-	dst=${REGISTRY}/${image#*/}
-	skopeo copy --format=v2s2 docker://$src docker://$dst
+	dst=${DESTDIR}/${image#*/}.tar
+	podman pull $src
+	podman save $src > $dst
 done
